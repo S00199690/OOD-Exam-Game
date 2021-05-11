@@ -21,10 +21,11 @@ namespace RyanMcDonald_S00199690
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        //lists for all games and filtered
         List<Game> AllGames;
         List<Game> filteredGames;
 
+        //intialises database
         GameData db = new GameData();
         public MainWindow()
         {
@@ -33,7 +34,7 @@ namespace RyanMcDonald_S00199690
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            //querys the database and returns all the games
             var query = from p in db.Games
                         select p;
 
@@ -44,6 +45,7 @@ namespace RyanMcDonald_S00199690
 
         private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //checks to see what game is being selected
             Game selectedGame = lbxGames.SelectedItem as Game;
 
             if (selectedGame != null)
@@ -55,6 +57,7 @@ namespace RyanMcDonald_S00199690
 
         private void cbxPlatform_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //switch statement that checks what the index combobox is currently on
             switch (cbxPlatform.SelectedIndex)
             {
                 //all platforms
