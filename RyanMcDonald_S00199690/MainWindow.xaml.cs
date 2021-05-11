@@ -62,7 +62,7 @@ namespace RyanMcDonald_S00199690
             {
                 //all platforms
                 case 0:
-                    //returns and sorts all shows and refreshs show listbox
+                    //returns and sorts all games and refreshs game listbox
                     var queryAll = from games in db.Games
                                    select games;
                     filteredGames = queryAll.ToList();
@@ -72,7 +72,7 @@ namespace RyanMcDonald_S00199690
 
                 //pc platform
                 case 1:
-                    //returns and sorts pc games and refreshs show listbox
+                    //returns and sorts pc games and refreshs game listbox
                     var queryPC = from games in db.Games
                                       where games.Platform.Contains("PC")
                                       select games;
@@ -84,7 +84,7 @@ namespace RyanMcDonald_S00199690
 
                 //xbox platform
                 case 2:
-                    //returns and sorts xbox games and refreshs show listbox
+                    //returns and sorts xbox games and refreshs game listbox
                     var queryXbox = from games in db.Games
                                   where games.Platform.Contains("Xbox")
                                   select games;
@@ -96,7 +96,7 @@ namespace RyanMcDonald_S00199690
 
                 //ps platform
                 case 3:
-                    //returns and sorts pc games and refreshs show listbox
+                    //returns and sorts pc games and refreshs game listbox
                     var queryPS = from games in db.Games
                                   where games.Platform.Contains("PS")
                                   select games;
@@ -108,7 +108,7 @@ namespace RyanMcDonald_S00199690
 
                 //switch platform
                 case 4:
-                    //returns and sorts pc games and refreshs show listbox
+                    //returns and sorts pc games and refreshs game listbox
                     var querySwitch = from games in db.Games
                                   where games.Platform.Contains("Switch")
                                   select games;
